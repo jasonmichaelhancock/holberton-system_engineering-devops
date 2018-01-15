@@ -1,0 +1,1 @@
+This project covers Variables, Expansions, Shell Arithmatic, the Alias Command and Shell Initialization files.
