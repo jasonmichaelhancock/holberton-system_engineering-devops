@@ -1,1 +1,0 @@
-This project covers varibles, expansins, arithmatic, the aliaas command, and Shell initilization files.
