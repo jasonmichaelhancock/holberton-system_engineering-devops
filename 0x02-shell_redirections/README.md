@@ -1,0 +1,1 @@
+This project covers the Shell, I/O Redirection and Special Characters.
