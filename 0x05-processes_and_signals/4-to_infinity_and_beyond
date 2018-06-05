@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Script to print an infinte loop.
-while :
+
+while yes
 do
     echo "To infinity and beyond"
     sleep 2
