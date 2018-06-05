@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Script to display running bash processes.
+./getpid | grep bash
