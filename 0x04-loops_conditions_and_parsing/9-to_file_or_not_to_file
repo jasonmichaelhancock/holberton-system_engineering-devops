@@ -5,12 +5,14 @@ if [ -e holbertonschool ]
 then
 	echo "holbertonschool file does exist"
 	if [ -s holbertonschool ]
-	then echo "holbertonschool file is not empty"
+	then
+	    echo "holbertonschool file is not empty"
 	else
 		echo "holbertonschool file is empty"
         fi
 	if [ -f holbertonschool ]
-        then echo "holbertonschool is a regular file"
+        then
+	    echo "holbertonschool is a regular file"
 	fi
 else
         echo "holbertonschool file does not exist"
