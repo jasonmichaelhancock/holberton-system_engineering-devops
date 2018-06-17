@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+# This script is displaying "Holberton School" 10 times plus a "Hi" after the 9th iteration
+
+COUNTER=1
+while [  $COUNTER -lt 21 ]; do
+    if [ $COUNTER = 4 ]
+    then
+	echo $COUNTER
+	echo bad luck from China
+	let COUNTER=COUNTER+1
+    elif [ $COUNTER = 9 ]
+    then
+	echo $COUNTER
+	echo bad luck from Japan
+	let COUNTER=COUNTER+1
+    elif [ $COUNTER = 17 ]
+    then
+        echo $COUNTER
+        echo bad luck from Italy
+        let COUNTER=COUNTER+1
+    else
+        echo $COUNTER
+        let COUNTER=COUNTER+1
+    fi
+done
