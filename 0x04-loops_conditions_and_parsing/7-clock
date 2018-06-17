@@ -2,7 +2,7 @@
 # This script is displaying the time of a day in hours and minutes
 
 HOUR=0
-while [  $HOUR -lt 12 ]; do
+while [  $HOUR -lt 13 ]; do
     echo Hour: $HOUR
     MINUTE=1
     let HOUR=HOUR+1
