@@ -9,7 +9,7 @@ while [  $COUNTER -lt 21 ]; do
 	    echo bad luck from China
 	    let COUNTER=COUNTER+1
 	    ;;
-	4)
+	9)
 	    echo $COUNTER
 	    echo bad luck from Japan
 	    let COUNTER=COUNTER+1
