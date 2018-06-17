@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# This script displays the famous "FizzBuzz" problem.
+COUNTER=1
+while [  $COUNTER -lt 100 ]; do
+    if ! (( COUNTER % 15 ))
+    then
+        echo FizzBuzz
+        let COUNTER=COUNTER+1
+    elif ! (( COUNTER % 3 ))
+    then
+	echo Fizz
+	let COUNTER=COUNTER+1
+    elif ! (( COUNTER % 5 ))
+    then
+	echo Buzz
+	let COUNTER=COUNTER+1
+    else
+        echo $COUNTER
+        let COUNTER=COUNTER+1
+    fi
+done
