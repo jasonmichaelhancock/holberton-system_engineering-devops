@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# This script is displaying "Holberton School" 10 times plus a "Hi" after the 9th iteration
+
+COUNTER=0
+while [  $COUNTER -lt 10 ]; do
+    if [ $COUNTER = 4 ]
+    then
+	echo bad luck
+	let COUNTER=COUNTER+1
+    elif [ $COUNTER = 8 ]
+    then
+	echo good luck
+	let COUNTER=COUNTER+1
+    else
+        echo Holberton School
+        let COUNTER=COUNTER+1
+    fi
+done
