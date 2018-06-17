@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # This script displays the famous "FizzBuzz" problem.
 COUNTER=1
-while [  $COUNTER -lt 100 ]; do
+while [  $COUNTER -lt 101 ]; do
     if ! (( COUNTER % 15 ))
     then
         echo FizzBuzz
