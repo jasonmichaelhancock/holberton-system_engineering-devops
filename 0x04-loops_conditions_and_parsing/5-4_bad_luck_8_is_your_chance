@@ -3,11 +3,11 @@
 
 COUNTER=0
 while [  $COUNTER -lt 10 ]; do
-    if [ $COUNTER = 4 ]
+    if [ $COUNTER = 3 ]
     then
 	echo bad luck
 	let COUNTER=COUNTER+1
-    elif [ $COUNTER = 8 ]
+    elif [ $COUNTER = 7 ]
     then
 	echo good luck
 	let COUNTER=COUNTER+1
