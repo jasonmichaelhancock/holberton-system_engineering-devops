@@ -1,2 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
+#Script that shows listening ports
+
 sudo netstat -lptn
