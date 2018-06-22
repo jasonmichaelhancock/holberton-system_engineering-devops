@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 #Script to return a ping from Google
  
-ping -c 5 $1
+ping -c 5 "$1"
