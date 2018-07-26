@@ -1,0 +1,1 @@
+Task to debug a curl request that returns an error.
