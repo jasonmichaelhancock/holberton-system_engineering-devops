@@ -1,0 +1,1 @@
+This project continues our study of Web Stack Debugging, including debugging a docker nginx container listening on the wrong port and to have nginx not be running.
