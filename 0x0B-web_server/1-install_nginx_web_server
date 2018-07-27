@@ -3,5 +3,5 @@
 sudo apt-get update
 sudo apt-get -y install nginx
 sudo mv /usr/share/nginx/html/index.html /usr/share/nginx/html/index.txt
-sudo echo "Holberton School" > /usr/share/nginx/html/index.html
+sudo echo "hello Holberton School" > /usr/share/nginx/html/index.html
 sudo service nginx restart
