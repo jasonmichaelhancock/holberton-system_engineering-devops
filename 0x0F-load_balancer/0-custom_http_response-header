@@ -1,0 +1,8 @@
+#!/usr/bin env bash
+#Script Sets up webserver2 with custom HTTP header
+
+sudo apt-get update
+sudo apt-get install -y nginx
+sudo sed -i '23i\\add_header X-Served-By $hostname;' /etc/nginx/sites-available/default
+sudo echo "Holberton School" > /usr/share/nginx/html/index.html
+sudo service nginx restart
