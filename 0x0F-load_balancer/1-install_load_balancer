@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#Install and configure HAproxy on your lb-01 server.
+
+sudo apt-get -y update
+sudo apt-get install -y haproxy=1.5\*
+sudo apt-get install -y nginx
+echo "listen 352-lb-01" | sudo tee -a /etc/haproxy/haproxy.cfg
+echo "bind *:80" | sudo tee -a /etc/haproxy/haproxy.cfg
+echo "mode http" | sudo tee -a /etc/haproxy/haproxy.cfg
+echo "balance roundrobin" | sudo tee -a /etc/haproxy/haproxy.cfg
+echo "server 352-web-01 104.196.196.20 check" | sudo tee -a /etc/haproxy/haproxy.cfg
+echo "server 352-web-02 35.227.25.219 check" | sudo tee -a /etc/haproxy/haproxy.cfg
+sudo service nginx restart
+sudo service haproxy restart
