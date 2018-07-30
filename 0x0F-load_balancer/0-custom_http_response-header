@@ -1,4 +1,4 @@
-#!/usr/bin env bash
+#!/usr/bin/env bash
 #Script Sets up webserver2 with custom HTTP header
 
 sudo apt-get update
