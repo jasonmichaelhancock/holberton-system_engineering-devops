@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# Script that will display information about subdomains.
+
+
+if [ $# -eq 1 ]; then
+    for subd in www lb-01 web-01 web-02; do
+    Name="$(dig "$subd"."$1" | grep -A1 'ANSWER SECTION:' | tail -1 | awk '{print $4}')"
+    IP="$(dig "$subd"."$1" | grep -A1 'ANSWER SECTION:' | tail -1 | awk '{print $5}')"
+    echo "The subdomain $subd is a $Name record and points to $IP"
+    done
+else
+    Name="$(dig "$2"."$1" | grep -A1 'ANSWER SECTION:' | tail -1 | awk '{print $4}')"
+    IP="$(dig "$2"."$1" | grep -A1 'ANSWER SECTION:' | tail -1 | awk '{print $5}')"
+    echo "The subdomain $2 is a $Name record and points to $IP"
+fi
