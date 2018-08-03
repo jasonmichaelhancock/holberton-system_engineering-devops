@@ -1,0 +1,1 @@
+This project, Web Stack Debugging #2 focuses on debugging user issues.
