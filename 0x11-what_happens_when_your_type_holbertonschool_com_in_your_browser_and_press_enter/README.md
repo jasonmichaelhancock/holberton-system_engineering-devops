@@ -1,0 +1,1 @@
+This project is a blog post which describes everything that happens when you enter a url in a browser.
