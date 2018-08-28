@@ -13,9 +13,9 @@ def get_info(employee_id):
     '''
     emp_id = argv[1]
     emp = requests.get('https://jsonplaceholder.typicode.com/users/{}'
-                        .format(emp_id)).json()
+                       .format(emp_id)).json()
     todos = requests.get('https://jsonplaceholder.typicode.com/todos?userId={}'
-                        .format(emp_id)).json()
+                         .format(emp_id)).json()
     name = emp.get('name')
     count = 0
     completed_tasks = []

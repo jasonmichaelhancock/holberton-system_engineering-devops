@@ -14,9 +14,9 @@ def output_csv(employee_id):
     '''
     emp_id = argv[1]
     emp = requests.get('https://jsonplaceholder.typicode.com/users/{}'
-                        .format(emp_id)).json()
+                       .format(emp_id)).json()
     todos = requests.get('https://jsonplaceholder.typicode.com/todos?userId={}'
-                        .format(emp_id)).json()
+                         .format(emp_id)).json()
     csvfile = emp_id + '.csv'
     with open(csvfile, 'w', newline='') as output:
         tasks = csv.writer(output, quoting=csv.QUOTE_ALL)
