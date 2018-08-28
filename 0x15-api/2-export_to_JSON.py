@@ -23,7 +23,7 @@ def output_json(employee_id):
         task = {}
         task['task'] = todo.get('title')
         task['completed'] = todo.get('completed')
-        task['username'] = todo.get('username')
+        task['username'] = emp.get('username')
         todo_list.append(task)
     json_todos = {}
     json_todos[emp_id] = todo_list
