@@ -12,7 +12,7 @@ def number_of_subscribers(subreddit):
     '''Returns the number of subscribers for a given subreddit.'''
     user = {'User-Agent': 'Jason'}
     endpoint = requests.get('https://www.reddit.com/r/{}/about.json'
-                       .format(subreddit), headers=user).json()
+                            .format(subreddit), headers=user).json()
     try:
         return endpoint.get('data').get('subscribers')
     except Exception:
