@@ -1,10 +1,15 @@
 # Change file limit parameter
 
-exec { 'increase_fileno_limit':
-  path     => ['/bin'],
-  command  => 'sed -i \"s/15/50000/g\" /etc/default/nginx'
+$settings = '/etc/default/nginx'
+file { $settings:
+  ensure => present,
 }
+exec { 'increase_fileno_limit':
+  command => "sed -i 's/15/15000/' ${settings}",
+  path    => [ '/bin/' ]
+}
+
 exec { 'restart nginx':
-  path     => ['/usr/bin'],
-  command  => 'sudo service nginx restart'
+  command => 'service nginx restart',
+  path    => [ '/usr/bin/' ]
 }
