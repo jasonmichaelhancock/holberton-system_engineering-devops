@@ -1,11 +1,7 @@
 # Change file limit parameter
 
-$settings = '/etc/default/nginx'
-file { $settings:
-  ensure => present,
-}
 exec { 'increase_fileno_limit':
-  command => "sed -i 's/15/15000/' ${settings}",
+  command => 'sed -i "${} a ULIMIT=\"-n 2048\"" /etc/default/nginx',
   path    => [ '/bin/' ]
 }
 
