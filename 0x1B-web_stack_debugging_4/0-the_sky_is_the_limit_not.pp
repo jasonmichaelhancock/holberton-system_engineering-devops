@@ -1,8 +1,9 @@
 # Change file limit parameter
 
 exec { 'increase_fileno_limit':
-  command => '/bin/sed -i "s/ULIMIT=\"-n 15\"/ULIMIT=\"-n 2048\"/g" /etc/default/nginx',
+  command => 'sed -i "s/15/10000/g" /etc/default/nginx',
   path    => [ '/bin/' ]
+  onlyif  => 'test -e /etc/default/nginx',
 }
 
 exec { 'restart nginx':
